@@ -12,6 +12,6 @@ public interface ReviewRepository extends JpaRepository<Review, Integer> {
     Review save(Review review);
     //@Query(value = "From review Where title = :title", nativeQuery = true)
     List<Review> findByTitle(String title);
-    //@Query(value = "SELECT AVG(rating) FROM review WHERE book_title = :title")
-    //int findAverage(String title);
+    @Query(value = "SELECT AVG(rating) FROM review WHERE title = :title", nativeQuery = true)
+    int findAverageByTitle(String title);
 }

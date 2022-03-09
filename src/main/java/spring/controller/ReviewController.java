@@ -21,10 +21,10 @@ public class ReviewController {
         return reviewService.findReviewByTitle(title);
     }
 
-    /*@GetMapping
-    public int getAvgRating(String title) {
+    @GetMapping("average/{title}")
+    public int getAvgRating(@PathVariable String title) {
         return reviewService.avgRating(title);
-    }*/
+    }
 
     @PostMapping(value="postreview"/*consumes = {"application/xml","application/json"}*/)
     public Review postReview(@RequestBody Review review) {

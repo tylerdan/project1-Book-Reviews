@@ -17,9 +17,9 @@ public class ReviewService {
         return reviewRepository.save(review);
     }
 
-    /*public int avgRating(String title){
-        return reviewRepository.findAverage(title);
-    }*/
+    public int avgRating(String title){
+        return reviewRepository.findAverageByTitle(title);
+    }
 
     public List<Review> findReviewByTitle(String title) {
         return reviewRepository.findByTitle(title);

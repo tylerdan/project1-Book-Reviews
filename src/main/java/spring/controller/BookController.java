@@ -41,6 +41,11 @@ public class BookController {
         bookService.deleteBook(title);
     }
 
+    /*@PatchMapping(value="/update/{title}/{author}/{yearPublish}")
+    public Book updateBook(@PathVariable String title, @PathVariable String author, @PathVariable int yearPublish) {
+        return bookService.patchBook(title, author, yearPublish);
+    }*/
+
     // TODO: 3/5/2022
     // add @PatchMapping - update book info(?)
 }
