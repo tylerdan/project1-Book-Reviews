@@ -26,7 +26,7 @@ public class ReviewController {
         return reviewService.avgRating(title);
     }
 
-    @PostMapping(value="postreview"/*consumes = {"application/xml","application/json"}*/)
+    @PostMapping("postreview"/*consumes = {"application/xml","application/json"}*/)
     public Review postReview(@RequestBody Review review) {
         return reviewService.saveReview(review);
     }

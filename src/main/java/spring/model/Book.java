@@ -9,6 +9,7 @@ import lombok.ToString;
 
 import javax.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -32,7 +33,7 @@ public class Book {
             orphanRemoval = true
     )
     @JoinColumn(name="title")
-    private List<Review> reviews;
+    private List<Review> reviews = new ArrayList<>();
    // @JsonIgnoreProperties(value="bookTitle")
 
 }

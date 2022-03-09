@@ -36,8 +36,8 @@ public class BookService {
         bookRepository.deleteByTitle(title);
     }
 
-    /*public Book patchBook(String title, String author, int yearPublish) {
-       return bookRepository.patchByTitle(title, author, yearPublish);
+    /*public Book patchBook(Book book) {
+       return bookRepository.update(book);
     }*/
 
     // TODO: 3/5/2022

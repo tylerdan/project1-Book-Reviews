@@ -26,7 +26,7 @@ public class BookController {
         return bookService.findBookByTitle(title);
     }
 
-    @PostMapping("postBook" /*consumes = {"application/xml","application/json"}*/)
+    @PostMapping("postbook")
     public Book postBook(@RequestBody Book book) {
         return bookService.saveBook(book);
     }
@@ -36,14 +36,14 @@ public class BookController {
         return bookService.findBooksByAuthor(author);
     }
 
-    @DeleteMapping(value="/{title}")
+    @DeleteMapping("{title}")
     public void deleteBook(@PathVariable String title) {
         bookService.deleteBook(title);
     }
 
-    /*@PatchMapping(value="/update/{title}/{author}/{yearPublish}")
-    public Book updateBook(@PathVariable String title, @PathVariable String author, @PathVariable int yearPublish) {
-        return bookService.patchBook(title, author, yearPublish);
+    /*@PatchMapping(value="/update")
+    public Book updateBook(@RequestBody Book book) {
+        return bookService.patchBook(book);
     }*/
 
     // TODO: 3/5/2022

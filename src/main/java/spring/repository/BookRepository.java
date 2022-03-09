@@ -17,9 +17,9 @@ public interface BookRepository extends JpaRepository<Book, String> {
     @Query("from Book where author = :author")
     List<Book> findAllByAuthor(String author);
     //@Query("from Book where title = :title")
-    void deleteByTitle(String title);
-    /*@Query("Update Book Set author = :author, year_publish = :yearPublish where title = :title")
-    Book patchByTitle(String title, String author, int yearPublish);*/
+    void deleteByTitle(String book_title);
+    //@Query("Update Book Set author = :author, year_publish = :yearPublish where title = :title")
+    //Book update(Book book);
     // TODO: 3/5/2022
     //update book method
 }
