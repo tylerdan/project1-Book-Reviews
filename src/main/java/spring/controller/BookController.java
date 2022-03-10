@@ -36,12 +36,12 @@ public class BookController {
         return bookService.findBooksByAuthor(author);
     }
 
-    @DeleteMapping("{title}")
+    @DeleteMapping("deletebook/{title}")
     public void deleteBook(@PathVariable String title) {
         bookService.deleteBook(title);
     }
 
-    @PatchMapping("/update/{title}")
+    @PatchMapping("update/{title}")
     public Book updateBook(@PathVariable String title, @RequestBody Book book) {
         Book savedBook = getBookByName(title);
         if(book.getAuthor()!=null) {

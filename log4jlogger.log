@@ -1,0 +1,2 @@
+2022-03-10 11:02:40 INFO  BookAspect:17 - List spring.controller.BookController.getBook()
+2022-03-10 11:06:26 INFO  BookAspect:21 - Book spring.controller.BookController.postBook(Book)

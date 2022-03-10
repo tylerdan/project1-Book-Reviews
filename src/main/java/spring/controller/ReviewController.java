@@ -37,12 +37,12 @@ public class ReviewController {
         return reviewService.saveReview(review);
     }
 
-    @DeleteMapping("review/{id}")
+    @DeleteMapping("deletereview/{id}")
     public void deleteReview(@PathVariable int id) {
         reviewService.deleteReviewById(id);
     }
 
-    @PatchMapping("/updatereview/{id}")
+    @PatchMapping("updatereview/{id}")
     public Review updateBook(@PathVariable int id, @RequestBody Review review) {
         Review savedReview = getReviewById(id);
         if(review.getReview()!=null) {
