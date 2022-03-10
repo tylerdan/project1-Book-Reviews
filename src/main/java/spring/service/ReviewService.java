@@ -17,11 +17,23 @@ public class ReviewService {
         return reviewRepository.save(review);
     }
 
+    public Review findReviewById(int id){
+        return reviewRepository.findById(id);
+    }
+
     public int avgRating(String title){
         return reviewRepository.findAverageByTitle(title);
     }
 
     public List<Review> findReviewByTitle(String title) {
         return reviewRepository.findByTitle(title);
+    }
+
+    public void deleteReviewById(int id) {
+        reviewRepository.deleteById(id);
+    }
+
+    public Review patchReview(Review review) {
+        return saveReview(review);
     }
 }
