@@ -20,6 +20,7 @@
         <tomcat.version>9.0.58</tomcat.version>
         <jackson.version>2.13.1</jackson.version>
         <spring.version>2.6.4</spring.version>
+        <java.version>8</java.version>
     </properties>
 
     <dependencies>
@@ -71,7 +72,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${project.parent.version}</version>
                 <configuration>
                     <excludes>
                         <exclude>
