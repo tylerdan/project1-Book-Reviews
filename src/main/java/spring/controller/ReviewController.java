@@ -43,15 +43,19 @@ public class ReviewController {
     }
 
     @PatchMapping("updatereview/{id}")
-    public Review updateBook(@PathVariable int id, @RequestBody Review review) {
+    public Review updateReview(@PathVariable int id, @RequestBody Review review) {
         Review savedReview = getReviewById(id);
-        if(review.getReview()!=null) {
-            savedReview.setReview(review.getReview());
+        if (savedReview != null) {
+            if (review.getReview() != null) {
+                savedReview.setReview(review.getReview());
+            }
+            System.out.println(review.getRating() != 0);
+            if (review.getRating() != 0) {
+                savedReview.setRating(review.getRating());
+            }
+            return reviewService.patchReview(savedReview);
+        } else { // if review 'id' doesn't already exist, create new entry in db
+            return reviewService.saveReview(review);
         }
-        System.out.println(review.getRating()!=0);
-        if(review.getRating()!=0) {
-            savedReview.setRating(review.getRating());
-        }
-        return reviewService.patchReview(savedReview);
     }
 }

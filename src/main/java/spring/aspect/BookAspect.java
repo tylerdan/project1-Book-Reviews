@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect
 public class BookAspect {
-    static final Logger log = Logger.getLogger(BookAspect.class);
+    public static final Logger log = Logger.getLogger(BookAspect.class);
 
     @Before("execution(* getBook*(..))")
     public void BeforeGettingBook(JoinPoint joinpoint) {
