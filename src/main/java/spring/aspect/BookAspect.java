@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 public class BookAspect {
     public static final Logger log = Logger.getLogger(BookAspect.class);
 
+//  Advice | Joinpoint | Pointcut
     @Before("execution(* getBook*(..))")
     public void BeforeGettingBook(JoinPoint joinpoint) {
         log.info(joinpoint.getSignature());

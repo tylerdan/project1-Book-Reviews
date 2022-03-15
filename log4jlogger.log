@@ -22,3 +22,4 @@
 2022-03-11 06:25:01 INFO  BookAspect:25 - Review spring.controller.ReviewController.updateBook(int,Review)
 2022-03-11 06:25:20 INFO  BookAspect:25 - Review spring.controller.ReviewController.updateBook(int,Review)
 2022-03-11 06:26:27 INFO  BookAspect:17 - List spring.controller.BookController.getBook()
+2022-03-11 09:06:53 INFO  BookAspect:17 - Book spring.controller.BookController.getBookByName(String)
